@@ -9,15 +9,9 @@ namespace WordCounter
 {
     public class WordCounter
     {
-        private string _text;
         private Dictionary<string, int> _words = new Dictionary<string, int>();
 
-        public WordCounter(string text)
-        {
-            this._text = text;
-        }
-
-        private Dictionary<string, int> Count()
+        private Dictionary<string, int> Count(string _text)
         {
             string[] strings = _text.Trim().Split(' ');
             for (int i = 0; i < strings.Length; i++)

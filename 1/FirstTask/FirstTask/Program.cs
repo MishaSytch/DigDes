@@ -21,11 +21,9 @@ namespace Program
                 {
                     _text.Append(line).Append(" ");
                 }
-                WordCounter.WordCounter wordCounter = new WordCounter.WordCounter(_text.ToString());
+                WordCounter.WordCounter wordCounter = new WordCounter.WordCounter();
                 var reflectMeth = wordCounter.GetType().GetMethod("Count", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-                var reflectField = wordCounter.GetType().GetField("_text", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-                var text = reflectField.GetValue(wordCounter);
-                var dict = reflectMeth.Invoke(wordCounter, new object[0]);
+                var dict = reflectMeth.Invoke(wordCounter, new object[] {_text.ToString()});
             }
         }
     }

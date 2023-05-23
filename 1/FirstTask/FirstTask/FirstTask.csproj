@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <Reference Include="WordCounter">
-      <HintPath>WordCounter.dll</HintPath>
+      <HintPath>..\..\WordCounter\WordCounter\bin\Release\WordCounter.dll</HintPath>
     </Reference>
   </ItemGroup>
 
