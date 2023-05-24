@@ -23,8 +23,15 @@ namespace Program
                 }
                 WordCounter.WordCounter wordCounter = new WordCounter.WordCounter();
                 var reflectMeth = wordCounter.GetType().GetMethod("Count", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-                var dict = reflectMeth.Invoke(wordCounter, new object[] {_text.ToString()});
+                Dictionary<string, int> dict = (Dictionary<string, int>)reflectMeth.Invoke(wordCounter, new object[] {_text.ToString()});
+
+                StringBuilder str = new StringBuilder();
+                foreach (string word in dict.Keys) str.AppendLine(String.Format("{0,-24} {1}\n", word, dict[word]));
+                using (StreamWriter streamWriter = File.CreateText($"{path}/count.txt"))
+                {
+                    streamWriter.WriteLine(str);
+                }
             }
-        }
+            }
     }
 }
