@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\DigDes\1\WordCounter\WordCounter\bin\Release\WordCounter.dll
+C:\Users\user\Desktop\DigDes\1\WordCounter\WordCounter\bin\Release\WordCounter.pdb
+C:\Users\user\Desktop\DigDes\1\WordCounter\WordCounter\obj\Release\WordCounter.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\DigDes\1\WordCounter\WordCounter\obj\Release\WordCounter.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\DigDes\1\WordCounter\WordCounter\obj\Release\WordCounter.dll
+C:\Users\user\Desktop\DigDes\1\WordCounter\WordCounter\obj\Release\WordCounter.pdb
+C:\Users\user\Desktop\DigDes\2\WordCounter\WordCounter\bin\Release\WordCounter.dll
+C:\Users\user\Desktop\DigDes\2\WordCounter\WordCounter\bin\Release\WordCounter.pdb
+C:\Users\user\Desktop\DigDes\2\WordCounter\WordCounter\obj\Release\WordCounter.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\DigDes\2\WordCounter\WordCounter\obj\Release\WordCounter.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\DigDes\2\WordCounter\WordCounter\obj\Release\WordCounter.dll
+C:\Users\user\Desktop\DigDes\2\WordCounter\WordCounter\obj\Release\WordCounter.pdb
