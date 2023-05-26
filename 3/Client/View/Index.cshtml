@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@using System.Text
+@using WebApplication.Pages;
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    @{
+        StringBuilder str = new StringBuilder();
+        foreach (string word in Model.dict.Keys) str.AppendLine(String.Format("{0,-24} {1}", word, Model.dict[word]));
+        <textarea>@str.ToString()</textarea>
+    }
+</div>
