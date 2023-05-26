@@ -10,7 +10,7 @@ namespace WordCounter
 {
     public class WordCounter
     {
-        private Dictionary<string, int> _words = new Dictionary<string, int>();
+        private static Dictionary<string, int> _words = new Dictionary<string, int>();
         private object _lock = new object();
 
         private Dictionary<string, int> Count(string _text)
@@ -46,7 +46,7 @@ namespace WordCounter
 
         private void PCount(string word)
         {
-            lock (_lock)
+            //lock (_lock)
             {
                 StringBuilder variable = new StringBuilder();
                 foreach (var letter in word)
@@ -56,7 +56,15 @@ namespace WordCounter
                 {
                     if (_words.ContainsKey(variable.ToString()))
                     {
-                        _words[variable.ToString()]++;
+                        while (true)
+                        {
+                            try
+                            {
+                                _words[variable.ToString()]++;
+                                break;
+                            } catch (Exception e) { }
+                            
+                        }
                     }
                     else
                     {
