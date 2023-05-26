@@ -20,7 +20,7 @@ namespace WordCounter
 
                 StringBuilder variable = new StringBuilder();
                 foreach (var letter in tmp)
-                    if (char.IsLetter(letter) || letter.Equals("'")) //Регулярку вставить бы
+                    if (char.IsLetter(letter) || letter.Equals("'") || letter.Equals("-") && variable.ToString().Length != 0) //Регулярку вставить бы
                         variable.Append(letter);
                 if (variable.ToString().Trim().Length == 0) continue;
                 if (_words.ContainsKey(variable.ToString()))
