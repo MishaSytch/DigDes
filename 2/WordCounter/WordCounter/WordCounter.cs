@@ -20,18 +20,18 @@ namespace WordCounter
             {
                 string tmp = strings[i];
 
-                string variable = "";
+                StringBuilder variable = new StringBuilder();
                 foreach (var letter in tmp)
                     if (char.IsLetter(letter) || letter.Equals("'")) //Регулярку вставить бы
-                        variable += letter;
-                if (variable.Trim().Length == 0) continue;
-                if (_words.ContainsKey(variable))
+                        variable.Append(letter);
+                if (variable.ToString().Trim().Length == 0) continue;
+                if (_words.ContainsKey(variable.ToString()))
                 {
-                    _words[variable]++;
+                    _words[variable.ToString()]++;
                 }
                 else
                 {
-                    _words.Add(variable, 1);
+                    _words.Add(variable.ToString(), 1);
                 }
             }
             return _words;
@@ -48,19 +48,19 @@ namespace WordCounter
         {
             lock (_lock)
             {
-                string variable = "";
+                StringBuilder variable = new StringBuilder();
                 foreach (var letter in word)
                     if (char.IsLetter(letter) || letter.Equals("'")) //Регулярку вставить бы
-                        variable += letter;
-                if (variable.Trim().Length != 0)
+                        variable.Append(letter);
+                if (variable.ToString().Trim().Length != 0)
                 {
-                    if (_words.ContainsKey(variable))
+                    if (_words.ContainsKey(variable.ToString()))
                     {
-                        _words[variable]++;
+                        _words[variable.ToString()]++;
                     }
                     else
                     {
-                        _words.Add(variable, 1);
+                        _words.Add(variable.ToString(), 1);
                     }
                 }
             }
