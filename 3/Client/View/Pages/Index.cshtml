@@ -5,9 +5,10 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
+<p>Текст до отправки get запроса: Null null null Hello world hello Hello</p>
 @{
-    StringBuilder str = new StringBuilder();
-    foreach (string word in Model.dict.Keys) str.AppendLine(String.Format("{0,-24} {1}", word, Model.dict[word]));
-    <h1>@str.ToString()</h1>
+    foreach (string word in Model.dict.Keys) 
+    {
+        <h1>@String.Format("{0,-24} {1}\n", word, Model.dict[word])</h1>
+    }
 }

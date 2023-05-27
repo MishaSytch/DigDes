@@ -6,14 +6,10 @@ using WordCounter;
 public class IndexModel : PageModel
 {
     [BindProperty]
-    public string Text { get; set; }
-    public Dictionary<string, int>? dict;
+    public string Text { get; set; } = "Null null null Hello world hello Hello";
+    public Dictionary<string, int> dict = new Dictionary<string, int>();
 
     public void OnGet()
-    {
-        
-    }
-    public void OnPut()
     {
         var client = new WordCounter.WordCounter();
         dict = client.ParallelStart(Text);
