@@ -1,0 +1,5 @@
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\Host\obj\Debug\net6.0\Host.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\Host\obj\Debug\net6.0\Host.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\Host\obj\Debug\net6.0\Host.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\Host\obj\Debug\net6.0\Host.AssemblyInfo.cs
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\Host\obj\Debug\net6.0\Host.csproj.CoreCompileInputs.cache

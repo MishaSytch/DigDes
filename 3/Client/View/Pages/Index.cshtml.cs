@@ -7,11 +7,15 @@ public class IndexModel : PageModel
 {
     [BindProperty]
     public string Text { get; set; }
-    public Dictionary<string, int> dict;
+    public Dictionary<string, int>? dict;
 
     public void OnGet()
     {
+        
+    }
+    public void OnPut()
+    {
         var client = new WordCounter.WordCounter();
-        var dict = client.ParallelStart(Text);
+        dict = client.ParallelStart(Text);
     }
 }

@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\bin\Debug\net6.0\WcfLibrary.dll.config
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\bin\Debug\net6.0\WcfLibrary.deps.json
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\bin\Debug\net6.0\WcfLibrary.dll
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\bin\Debug\net6.0\WcfLibrary.pdb
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\bin\Debug\net6.0\WordCounter.dll
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\bin\Debug\net6.0\WordCounter.pdb
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\obj\Debug\net6.0\WcfLibrary.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\obj\Debug\net6.0\WcfLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\obj\Debug\net6.0\WcfLibrary.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\obj\Debug\net6.0\WcfLibrary.AssemblyInfo.cs
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\obj\Debug\net6.0\WcfLibrary.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\obj\Debug\net6.0\WcfLibrary.csproj.CopyComplete
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\obj\Debug\net6.0\WcfLibrary.dll
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\obj\Debug\net6.0\refint\WcfLibrary.dll
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\obj\Debug\net6.0\WcfLibrary.pdb
+C:\Users\user\Desktop\DigDes\3\WcfLibrary\WcfLibrary\obj\Debug\net6.0\ref\WcfLibrary.dll
