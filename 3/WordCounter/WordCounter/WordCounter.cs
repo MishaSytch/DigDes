@@ -46,7 +46,7 @@ namespace WordCounter
 
         private void PCount(string word)
         {
-            //lock (_lock)
+            lock (_lock)
             {
                 StringBuilder variable = new StringBuilder();
                 foreach (var letter in word)
