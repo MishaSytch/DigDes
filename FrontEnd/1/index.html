@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" lang="ru" />
     <title>Scott Pilgrim</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-    <img src="src/img/back2.png" id="mobile_back">
+    <img src="src/img/back2.png" id="mobile_back" alt="back2">
     <section id="intro" >
         <div class="mainPoster">
-            <img src="src/img/poster.jpg">
+            <img src="src/img/poster.jpg" alt="poster">
             <a target="_self" id="watching" href="https://www.kinopoisk.ru/film/105948/?utm_referrer=yandex.ru"><h3 id="ref_text">Смотреть фильм!</h3></a>
         </div>
         <div class="summery">
@@ -18,8 +18,8 @@
             <br>
             <p>Скотт Пилигрим нашел девушку своей мечты. Но на его пути стоит более сложная задача: чтобы встречаться с ней, Скотту придется победить ее семерых бывших.<br> Слоган фильма: <i>«Зацепи девчонку. Победи ее семерых злых бывших. Надери любви зад»</i></p>
             <br>
+            <h2>О фильме</h2>
             <table class="staff">
-                <thead><h2>О фильме</h2></thead>
                 <tbody>
                     <tr><td>Год производства</td><td>2010</td></tr>
                     <tr><td>Страна</td><td>США, Великобритания, Канада, Япония</td></tr>
@@ -45,8 +45,8 @@
         </div>
         <div class="opinion">
             <form>
+                <h2>Что вы думаете о фильме?</h2>
                 <table class="survey">
-                    <thead><h2>Что вы думаете о фильме?</h2></thead>
                     <tr>
                         <td><input type="text" required placeholder="Ваше имя"/></td>
                         <td><input type="text" required placeholder="Фамилия"/></td>
@@ -66,15 +66,15 @@
                         <td>Как вам фильм?</td>
                         <td>
                             <div>
-                                <input type="radio" value="5" name="stars">
+                                <input type="radio" id="5" name="stars">
                                 <label for="5">5</label><br>
-                                <input type="radio" value="4" name="stars">
+                                <input type="radio" id="4" name="stars">
                                 <label for="4">4</label><br>
-                                <input type="radio" value="3" name="stars">
+                                <input type="radio" id="3" name="stars">
                                 <label for="3">3</label><br>
-                                <input type="radio" value="2" name="stars">
+                                <input type="radio" id="2" name="stars">
                                 <label for="2">2</label><br>
-                                <input type="radio" value="1" name="stars">
+                                <input type="radio" id="1" name="stars">
                                 <label for="1">1</label><br>
                             </div>
                         </td>
