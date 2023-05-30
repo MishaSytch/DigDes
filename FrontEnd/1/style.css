@@ -1,0 +1,227 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+*{  
+    text-align: justify;
+    text-decoration-color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    color: rgb(221, 223, 222);
+}
+h1, h2, h3 {
+    color: azure;
+}
+
+i {
+    color: rgb(255, 196, 0);
+    font-weight: 500;
+}
+
+form {
+    color: aliceblue;
+}
+
+table {
+    color: azure;
+}
+
+td {
+    padding: 1% 2%;
+}
+
+@media (max-width: 1200px){
+
+    #intro {
+        padding: 15px 100px;
+        background: rgb(128, 1, 1);
+        scale: 100vh;
+    }
+
+
+    .mainPoster {
+        margin: 2% 20vw;
+        padding: 0px ;
+        width: 40vw;
+        border-radius: 10px;
+    }
+
+    .summery {
+        margin-left: 2%;
+        padding-right: 2%;
+        padding-top: 2%;
+        font-size: 1.5vw;
+    }
+
+
+    #ref_text {
+        background-color: rgb(230, 184, 0);
+        padding: 5%;
+        text-align: center;
+        border-radius: 14px;
+        font-size: 2vw;
+    }
+
+    .staff {
+        width: 80vw;
+        font-size: 2vw;
+
+    }
+
+    #main {
+        scale: 100vw;
+        display: block;
+    }
+
+    .main_text {
+        scale: 100vh;
+        font-size: 1.2vw;
+        /* background-image: url("src/img/back2.png");
+        background-repeat: no-repeat; */
+        background-size: 100%;
+        padding: 3%;
+        height: 2733px*100vh;
+    }
+
+    #mobile_back {
+        position: fixed;
+        padding: 0;
+        margin: 0;
+        z-index: -1;
+        background-color: #101010;
+        width: 100%;
+    }
+
+    #about {
+        padding: 3%;
+    }
+
+    .opinion {
+        padding-top: 10px;
+        scale: 100vw;
+        font-size: 1.5vw;
+        background-color: #101010;
+        padding-left: 10px;
+    }
+
+    .comment {
+        width: 25vw;
+        height: 15vw;
+    }
+
+    /*  */
+
+    .outer {
+        position: relative;
+        color: aliceblue;
+        text-align: center;
+        padding: 20px;
+        
+        font-size: 1.5vw;
+        background-color: #101010;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    #intro {
+        padding: 15px 100px;
+        background: rgb(128, 1, 1);
+        display: flex;
+        scale: 100vh;
+    }
+
+    #mobile_back {
+        
+        display: none;
+    }
+
+    .mainPoster {
+        margin: 2% 0px;
+        padding: 0px ;
+        width: 40vw;
+        border-radius: 10px;
+    }
+
+    .summery {
+        margin-left: 2%;
+        padding-right: 2%;
+        padding-top: 2%;
+        font-size: 1.5vw;
+    }
+
+
+    #ref_text {
+        background-color: rgb(230, 184, 0);
+        padding: 10px;
+        text-align: center;
+        border-radius: 14px;
+        font-size: 2vw;
+    }
+
+
+    #main {
+        scale: 100vh;
+        display: block;
+    }
+
+    .main_text {
+        scale: 100vw;
+        font-size: 1.5vw;
+        background-image: url("src/img/back1.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        padding: 3%;
+        height: 1153px*100vh;
+    }
+
+    #about {
+        padding: 3%;
+    }
+
+    .opinion {
+        padding-top: 10px;
+        scale: 100vw;
+        font-size: 1.5vw;
+        background-color: #101010;
+        padding-left: 35vw;
+    }
+
+    .comment {
+        width: 25vw;
+        height: 15vh;
+    }
+
+
+    .outer {
+        position: relative;
+        color: aliceblue;
+        text-align: center;
+        padding: 20px 41vw;
+        
+        font-size: 1.5vw;
+        background-color: #101010;
+    }
+}
