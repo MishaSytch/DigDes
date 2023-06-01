@@ -97,7 +97,7 @@ td {
         font-size: 2vw;
     }
     #main {
-        scale: 100vw;
+        width: 100vw;
         display: block;
         align-items: center;
     }
@@ -133,7 +133,12 @@ td {
         padding-top: 10px;
         font-size: 1.5vw;
         background-color: #101010;
+        align-items: center;
     }
+    #form {
+        margin-left: 35vw;
+    }
+
     .comment {
         width: 25vw;
         height: 15vw;
@@ -147,21 +152,22 @@ td {
         font-size: 1.5vw;
         background-color: #101010;
     }
-}
-.gif {
-    width: 25vw;
-    display: flex;
-}
-
-.btn {
-    color: white;
-    background-color: goldenrod;
-    margin-left: 45%;
-    border-width: 1vw;
-    border-color: red;
-    border-radius: 3px;
-    text-align: center;
-    font-size: 5vw;
+    .gif {
+        width: 25vw;
+        display: flex;
+        margin-left: 35vw;
+    }
+    
+    .btn {
+        color: white;
+        background-color: goldenrod;
+        margin-left: 35vw;
+        border-width: 1vw;
+        border-color: red;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 5vw;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -226,5 +232,19 @@ td {
         padding: 20px 41vw;
         font-size: 1.5vw;
         background-color: #101010;
+    }
+    .gif {
+        width: 25vw;
+        display: flex;
+    }
+    
+    .btn {
+        color: white;
+        background-color: goldenrod;
+        border-width: 1vw;
+        border-color: red;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 5vw;
     }
 }
