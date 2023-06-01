@@ -98,7 +98,6 @@
                         try {
                             const resp = await fetch(scottURL);
                             gif.src = resp.url;
-                            console.log(gif.src)
                         } catch (error) {
                             console.error(error);
                         }
@@ -112,7 +111,6 @@
                         try {
                             const resp = await fetch(secretURL);
                             secretImg.src = resp.url;
-                            console.log(gif.src)
                         } catch (error) {
                             console.error(error);
                         }
