@@ -44,99 +44,6 @@
         </div>
         <div class="opinion">
             <div id="form"></div>
-            <script crossorigin="" src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-            <script crossorigin="" src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
-            <script type="text/babel">
-
-
-                class MyForm extends React.Component {
-                    constructor(props) {
-                        super(props);
-                        this.state = {
-                            name: '',
-                            sex: 'Мужской',
-                            date: 'Не указано',
-                            stars: 5,
-                            comment: ''
-                        };
-
-                        this.handleChange = this.handleChange.bind(this);
-                        this.handleSubmit = this.handleSubmit.bind(this);
-                    }
-
-                    handleChange(event) {
-                        const target = event.target;
-                        const value = target.value;
-                        const name = target.name;
-
-                        this.setState({ 
-                            [name]: value
-                        });
-                    }
-
-                    handleSubmit(event) {
-                        alert('Ваше имя: ' + this.state.name);
-                        alert('Ваш пол: ' + this.state.sex);
-                        alert('Ваша дата рождения: ' + this.state.date);
-                        alert('Звезд: ' + this.state.stars);
-                        alert('Ваш комментарий: ' + this.state.comment);
-                        event.preventDefault();
-                    }
-
-                    ChooseYourSex() {
-                        const sex = [{id: '1', type: 'Мужской'}, {id: '2', type: 'Женский'}]
-                        return sex.map((type, index) => 
-                            <option>{type.type}</option>
-                        );
-                    }
-
-                    ChooseStars() 
-                    {
-                        const stars = [
-                            {id: '1', type: '1'}, 
-                            {id: '2', type: '2'},
-                            {id: '3', type: '3'}, 
-                            {id: '4', type: '4'}, 
-                            {id: '5', type: '5'}
-                        ]
-                        return stars.map((type, index) => 
-                        <lable>
-                                <input type='radio' name='stars' value={type.type} onChange={this.handleChange}/>
-                                {type.type}
-                                <br/>
-                        </lable>
-                        );
-                    }
-
-                    render() {
-                        return (
-                            <div>
-                                <h2>Что вы думаете о фильме?</h2>
-                                <form onSubmit={this.handleSubmit}>
-                                    <table onChange={this.handleChange}>
-                                        <input className='' name='name' value={this.state.name} onChange={this.handleChange} required placeholder="Ваше имя"/>    
-                                        <br/>Ваш пол: <br/>
-                                        <select name='sex' value={this.state.sex} onChange={this.handleChange}>{this.ChooseYourSex()}</select>
-                                        <br/>Дата рождения<br/>
-                                        <input type='date' name="date" value={this.state.date} onChange={this.handleChange}/>                   
-                                       
-                                        <br/>Сколько звезд поставите?<br/>
-                                        <div value={this.state.stars} onChange={this.handleChange}>
-                                            {this.ChooseStars()}
-                                        </div>
-                                        <br/>Как вам фильм?<br/>     
-                                        <textarea className='comment' name="comment" value={this.state.comment} onChange={this.handleChange}></textarea>
-                                    </table>
-                                    <input type="submit" value="Отправить" />
-                                </form>
-                            </div>
-                        )
-                    }
-                }
-
-                ReactDOM.render(<MyForm />, document.getElementById('form'));
-            </script>
             <br>
             <div>
                 <button class="btn">Нажми!</button>
@@ -173,5 +80,106 @@
     <section class="outer">
         <p>Мишаня Copyright 2023</p>
     </section>
+    <script crossorigin="" src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+            <script crossorigin="" src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+            <script type="text/babel">
+
+                   
+                       
+
+                class MyForm extends React.Component {
+                    constructor(props) {
+                        super(props);
+                        this.state = {
+                            name: '',
+                            sex: 'Мужской',
+                            date: 'Не указано',
+                            stars: 5,
+                            comment: ''
+                        };
+
+                        this.handleChange = this.handleChange.bind(this);
+                        this.handleSubmit = this.handleSubmit.bind(this);
+                    }
+
+                    handleChange(event) {
+                        const target = event.target;
+                        const value = target.value;
+                        const name = target.name;
+
+                        this.setState({ 
+                            [name]: value
+                        });
+                    }
+
+                    handleSubmit(event) {
+                        alert('Ваше имя: ' + this.state.name);
+                        alert('Ваш пол: ' + this.state.sex);
+                        alert('Ваша дата рождения: ' + this.state.date);
+                        alert('Звезд: ' + this.state.stars);
+                        alert('Ваш комментарий: ' + this.state.comment);
+                        event.preventDefault();
+                    }
+
+                    getOption(props) 
+                    {
+                        return props.map((type, index) => 
+                            <option>{type.type}</option>
+                        );
+                    }
+
+
+                    getRadio(props, name) 
+                    {
+                        return props.map((type, index) => 
+                        <lable>
+                                <input type='radio' name={name} value={type.type} onChange={this.handleChange}/>
+                                {type.type}
+                                <br/>
+                        </lable>
+                        );
+                    }
+
+
+                    render() {
+                        const sex = [{id: '1', type: 'Мужской'}, {id: '2', type: 'Женский'}]
+                        const stars = [
+                            {id: '1', type: '1'}, 
+                            {id: '2', type: '2'},
+                            {id: '3', type: '3'}, 
+                            {id: '4', type: '4'}, 
+                            {id: '5', type: '5'}
+                        ]
+                        return (
+                            
+                            <div>
+                                <h2>Что вы думаете о фильме?</h2>
+                                <form onSubmit={this.handleSubmit}>
+                                    <table onChange={this.handleChange}>
+                                        <input className='' name='name' value={this.state.name} onChange={this.handleChange} required placeholder="Ваше имя"/>    
+                                        <br/>Ваш пол: <br/>
+                                        <select name='sex' value={this.state.sex} onChange={this.handleChange}>
+                                            {this.getOption(sex)}
+                                        </select>
+                                        <br/>Дата рождения<br/>
+                                        <input type='date' name="date" value={this.state.date} onChange={this.handleChange}/>                   
+                                       
+                                        <br/>Сколько звезд поставите?<br/>
+                                        <div value={this.state.stars} onChange={this.handleChange}>
+                                            {this.getRadio(stars, 'stars')}
+                                        </div>
+                                        <br/>Как вам фильм?<br/>     
+                                        <textarea className='comment' name="comment" value={this.state.comment} onChange={this.handleChange}></textarea>
+                                    </table>
+                                    <input type="submit" value="Отправить" />
+                                </form>
+                            </div>
+                        )
+                    }
+                }
+
+                ReactDOM.render(<MyForm />, document.getElementById('form'));
+            </script>
 </body>
 </html>
