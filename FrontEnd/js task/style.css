@@ -68,6 +68,9 @@ td {
 }
 
 @media (max-width: 1200px) {
+    body {
+        background-color: #101010;
+    }
     #intro {
         padding: 15px 100px;
         background: rgb(128, 1, 1);
@@ -102,7 +105,6 @@ td {
         align-items: center;
     }
     .main_text {
-        scale: 100vh;
         font-size: 1.2vw;
         /* background-image: url("src/img/back2.png");
         background-repeat: no-repeat; */
@@ -119,9 +121,7 @@ td {
         padding: 0;
         margin: 0;
         z-index: -1;
-        background-color: #101010;
-        height: 100%;
-        width: 100vw;
+        width: 100%;
     }
     #about {
         padding: 3%;
@@ -133,7 +133,6 @@ td {
         padding-top: 10px;
         font-size: 1.5vw;
         background-color: #101010;
-        align-items: center;
     }
     #form {
         margin-left: 35vw;

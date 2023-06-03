@@ -88,28 +88,17 @@
             <br>
             <div>
                 <button class="btn">Нажми!</button>
-                <img src="null" class="gif" alt="img"/>
+                <img src="https://media.tenor.com/AlcidfrxIQsAAAAC/scott-pilgrim-michael-cera.gif" class="gif" alt="img"/>
                 <script class="js">   
-                    const gif = document.querySelector('.gif');
-                    const scottURL = 'https://media.tenor.com/AlcidfrxIQsAAAAC/scott-pilgrim-michael-cera.gif';
-    
-                    async function getImg() {
-                        try {
-                            const resp = await fetch(scottURL);
-                            gif.src = resp.url;
-                        } catch (error) {
-                            console.error(error);
-                        }
-                    }
-                    getImg();
-                    
-                    
-                    secretImg = document.querySelector('.gif');
-                    const secretURL = 'https://media.tenor.com/FLa21xn46ogAAAAi/scott-pilgrim-scott-pilgrim-vs-the-world.gif'
+                
+                    const secretImg = document.querySelector('.gif');
+                    const secretURL = "https://randomfox.ca/floof/";
+
                     async function getSecretImg() {
                         try {
                             const resp = await fetch(secretURL);
-                            secretImg.src = resp.url;
+                            const data = await resp.json();
+                            secretImg.src = data.image;
                         } catch (error) {
                             console.error(error);
                         }

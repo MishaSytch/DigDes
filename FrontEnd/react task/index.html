@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" lang="ru" />
+    <title>Scott Pilgrim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+    <img src="src/img/back2.png" id="mobile_back" alt="back2">
+    <section id="intro" >
+        <div class="mainPoster">
+            <img src="src/img/poster.jpg" alt="poster">
+            <a target="_self" id="watching" href="https://www.ivi.ru/watch/109176?utm_source=yandex&utm_medium=wizard"><h3 id="ref_text">Смотреть фильм!</h3></a>
+        </div>
+        <div class="summery">
+            <h1>Скотт Пилигрим против всех</h1>
+            <br>
+            <p>Скотт Пилигрим нашел девушку своей мечты. Но на его пути стоит более сложная задача: чтобы встречаться с ней, Скотту придется победить ее семерых бывших.<br> Слоган фильма: <i>«Зацепи девчонку. Победи ее семерых злых бывших. Надери любви зад»</i></p>
+            <br>
+            <h2>О фильме</h2>
+            <table class="staff">
+                <tbody>
+                    <tr><td>Год производства</td><td>2010</td></tr>
+                    <tr><td>Страна</td><td>США, Великобритания, Канада, Япония</td></tr>
+                    <tr><td>Жанр</td><td>фэнтези, боевик, мелодрама, комедия</td></tr>
+                    <tr><td>Режиссер</td><td>Эдгар Райт</td></tr>
+                    <tr><td>Сценарий</td><td>Майкл Бэколл, Эдгар Райт, Брайан Ли О’Мэлли</td></tr>
+                    <tr><td>Продюсер</td><td>Дж. Майлз Дэйл, Эрик Гиттер, Лиза Гиттер</td></tr>
+                    <tr><td>Оператор</td><td>Билл Поуп</td></tr>
+                    <tr><td>Композитор</td><td>Найджел Годрич</td></tr>
+                    <tr><td>Художник</td><td>Найджел Чёрчер, Лаура Джин Шеннон, Одетта Стоддард</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section id="main">
+        <div class="main_text">
+            <h1 id="about_header">Сюжет</h1>
+            <p id="about">Скотт Пилигрим — 22-летний бас-гитарист рок-группы Sex Bob-Omb из Торонто. Он встречается со школьницей Найвз Чау, однако его друзьям из группы Стивену Стиллзу и Ким Пайн, соседу по комнате Уоллесу Уэллсу и младшей сестре Стейси Пилигрим она не очень нравится. Скотт знакомится с девушкой-курьером Amazon, Рамоной Флауэрс, впервые увидев её во сне. Он теряет интерес к Найвз, но не торопится разрывать с ней отношения. Когда Sex Bob-Omb выступает в битве групп, на Скотта нападает Мэттью Пател, бывший парень Рамоны. Скотт побеждает его и узнаёт, что для того чтобы встречаться с Рамоной, нужно победить её семерых злых бывших.
+
+                Пилигрим окончательно расстаётся с Найвз, та винит в этом Рамону и обещает вернуть Скотта обратно. Тем временем Скотт побеждает следующих трёх бывших: актёра и скейтбордиста Лукаса Ли, вегана Тодда Инграма и лесбиянку Рокси Рихтер. При этом Пилигрим сталкивается со своей бывшей, поп-звездой Энви Адамс. После рассказов Рамоны о свиданиях Скотт расстаётся с ней. На следующей битве групп Sex Bob-Omb побеждает пятого и шестого бывших Рамоны, Кайла и Кена Катаянаги, а Скотт получает дополнительную жизнь. Рамона возвращается к своему седьмому бывшему, Гидеону Грейвсу. Sex Bob-Omb заключает контракт с лейблом Гидеона, кроме Скотта, покинувшего свою группу в знак протеста.
+                
+                Решив отвоевать сердце Рамоны, Скотт вступает в битву с Гидеоном, используя меч «Сила любви». Найвз встревает в битву и сражается с Рамоной, а Скотт признаётся, что изменял им обеим. Гидеон побеждает Скотта. Пилигрим использует дополнительную жизнь, заключает мир со своими друзьями и вновь вступает в схватку с Гидеоном, используя «Силу самоуважения». Осознав свои ошибки, Скотт объединяется с Найвз и побеждает Гидеона. Рамона готовится уйти. Найвз признаётся Скотту, что их отношения закончились, и просит догнать Рамону. Пилигрим следует её совету и просит Флауэрс дать ему шанс начать всё сначала.</p>
+        </div>
+        <div class="opinion">
+            <div id="form"></div>
+            <script crossorigin="" src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+            <script crossorigin="" src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+            <script type="text/babel">
+
+
+                class MyForm extends React.Component {
+                    constructor(props) {
+                        super(props);
+                        this.state = {
+                            name: '',
+                            sex: 'Мужской',
+                            date: 'Не указано',
+                            stars: 5,
+                            comment: ''
+                        };
+
+                        this.handleChange = this.handleChange.bind(this);
+                        this.handleSubmit = this.handleSubmit.bind(this);
+                    }
+
+                    handleChange(event) {
+                        const target = event.target;
+                        const value = target.value;
+                        const name = target.name;
+
+                        this.setState({ 
+                            [name]: value
+                        });
+                    }
+
+                    handleSubmit(event) {
+                        alert('Ваше имя: ' + this.state.name);
+                        alert('Ваш пол: ' + this.state.sex);
+                        alert('Ваша дата рождения: ' + this.state.date);
+                        alert('Звезд: ' + this.state.stars);
+                        alert('Ваш комментарий: ' + this.state.comment);
+                        event.preventDefault();
+                    }
+
+                    ChooseYourSex() {
+                        const sex = [{id: '1', type: 'Мужской'}, {id: '2', type: 'Женский'}]
+                        return sex.map((type, index) => 
+                            <option>{type.type}</option>
+                        );
+                    }
+
+                    ChooseStars() 
+                    {
+                        const stars = [
+                            {id: '1', type: '1'}, 
+                            {id: '2', type: '2'},
+                            {id: '3', type: '3'}, 
+                            {id: '4', type: '4'}, 
+                            {id: '5', type: '5'}
+                        ]
+                        return stars.map((type, index) => 
+                        <lable>
+                                <input type='radio' name='stars' value={type.type} onChange={this.handleChange}/>
+                                {type.type}
+                                <br/>
+                        </lable>
+                        );
+                    }
+
+                    render() {
+                        return (
+                            <div>
+                                <h2>Что вы думаете о фильме?</h2>
+                                <form onSubmit={this.handleSubmit}>
+                                    <table onChange={this.handleChange}>
+                                        <input className='' name='name' value={this.state.name} onChange={this.handleChange} required placeholder="Ваше имя"/>    
+                                        <br/>Ваш пол: <br/>
+                                        <select name='sex' value={this.state.sex} onChange={this.handleChange}>{this.ChooseYourSex()}</select>
+                                        <br/>Дата рождения<br/>
+                                        <input type='date' name="date" value={this.state.date} onChange={this.handleChange}/>                   
+                                       
+                                        <br/>Сколько звезд поставите?<br/>
+                                        <div value={this.state.stars} onChange={this.handleChange}>
+                                            {this.ChooseStars()}
+                                        </div>
+                                        <br/>Как вам фильм?<br/>     
+                                        <textarea className='comment' name="comment" value={this.state.comment} onChange={this.handleChange}></textarea>
+                                    </table>
+                                    <input type="submit" value="Отправить" />
+                                </form>
+                            </div>
+                        )
+                    }
+                }
+
+                ReactDOM.render(<MyForm />, document.getElementById('form'));
+            </script>
+            <br>
+            <div>
+                <button class="btn">Нажми!</button>
+                <img src="https://media.tenor.com/AlcidfrxIQsAAAAC/scott-pilgrim-michael-cera.gif" class="gif" alt="img"/>
+                <script class="js">   
+                
+                    const secretImg = document.querySelector('.gif');
+                    const secretURL = "https://randomfox.ca/floof/";
+
+                    async function getSecretImg() {
+                        try {
+                            const resp = await fetch(secretURL);
+                            const data = await resp.json();
+                            console.log(data)
+                            secretImg.src = data.image;
+                        } catch (error) {
+                            console.error(error);
+                        }
+                    }
+
+                    const button = document.querySelector('.btn');
+                    button.addEventListener('click', () => {
+                        let isLoaded = secretImg.complete;
+
+                        if (isLoaded) {
+                            getSecretImg();
+                        }
+                    })
+    
+                </script>
+            </div>
+        </div>
+    </section>
+    <section class="outer">
+        <p>Мишаня Copyright 2023</p>
+    </section>
+</body>
+</html>
