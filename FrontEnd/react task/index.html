@@ -172,19 +172,7 @@
                     alert('Ваш комментарий: ' + this.state.comment);
                     event.preventDefault();
                 }
-                
-                getRadio(props, name) 
-                {
-                    return props.map((type, index) => 
-                    <lable>
-                            <input type='radio' name={name} value={type.type} onChange={this.handleChange}/>
-                            {type.type}
-                            <br/>
-                    </lable>
-                    );
-                }
-
-            
+                            
                 render() {
                     return (       
                         <div>
