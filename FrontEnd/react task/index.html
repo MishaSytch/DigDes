@@ -121,16 +121,16 @@
             
             function GetRadio(props, name) 
             {
-                const list = props.stars.map((type, index) => 
-                    <lable for={type.type}>
-                            <input key={type.id} type='radio'/>
-                            {type.type}
-                            <br/>
-                    </lable>
-                );
-                return list;
+                return props.stars.map((type, index) =>  
+                    <lable for={type.id}>
+                        <input type='radio' name='stars' value={type.id}/>
+                        {type.type}
+                        <br/> 
+                    </lable>   
+                )
             }
-            const sex = [{id: '1', type: 'Мужской'}, {id: '2', type: 'Женский'}];
+
+            const sex = [{id: 'man', type: 'Мужской'}, {id: 'woman', type: 'Женский'}];
             const stars = [
                 {id: '1', type: '1'}, 
                 {id: '2', type: '2'},
@@ -168,7 +168,7 @@
                     alert('Ваше имя: ' + this.state.name);
                     alert('Ваш пол: ' + this.state.sex);
                     alert('Ваша дата рождения: ' + this.state.date);
-                    alert('Звезд: ' + this.state.stars);
+                    alert('Звёзд: ' + this.state.stars);
                     alert('Ваш комментарий: ' + this.state.comment);
                     event.preventDefault();
                 }
@@ -195,32 +195,29 @@
                                     <br/>
                                     <strong>Ваш пол: </strong>
                                     <br/>
-                                    <select name='sex' value={this.state.sex} onChange={this.handleChange}>
+                                    <select name='sex' value={this.state.sex} required onChange={this.handleChange}>
                                         <GetOption sex={sex}/>
                                     </select>
                                     <br/>
                                     <strong>Дата рождения</strong>
                                     <br/>
-                                    <input type='date' name="date" value={this.state.date} onChange={this.handleChange} required/>                   
+                                    <input type='date' name="date" value={this.state.date} required onChange={this.handleChange} />                   
                                     <br/>
-
-                                    <strong>Сколько звезд поставите? (Значения не сопоставляются)</strong>
-                                    <br/>
-                                    <GetRadio stars={stars} name='stars' value={this.state.stars} onChange={this.handleChange}/>
                                     
-                                    <strong>Сколько звезд поставите? (Старая рабочая версия)</strong>
-                                    <div value={this.state.stars} onChange={this.handleChange} required>
-                                           {this.getRadio(stars, 'stars')}
+                                    <strong>Сколько звёзд поставите?</strong>
+                                    <br/>
+                                    <div value={this.state.stars} required onChange={this.handleChange}>
+                                        <GetRadio stars={stars}/>
                                     </div>
-            
+
                                     <strong>Как вам фильм?</strong>   
                                     <br/>  
-                                    <textarea className='comment' name="comment" value={this.state.comment} onChange={this.handleChange} required></textarea>
+                                    <textarea className='comment' name="comment" value={this.state.comment} required onChange={this.handleChange}></textarea>
                                 </table>
                                 <input type="submit" value="Отправить" />
                             </form>
                         </div>
-                    )
+                    );
                 }
             }
             
