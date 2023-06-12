@@ -122,11 +122,11 @@
             function GetRadio(props) 
             {
                 return props.stars.map((type, index) =>  
-                    <lable key={type.id} for={type.id}>
+                    <label key={type.id} for={type.id}>
                         <input type='radio' name='stars' value={type.id}/>
                         {type.type}
                         <br/> 
-                    </lable>   
+                    </label>   
                 )
             }
 
