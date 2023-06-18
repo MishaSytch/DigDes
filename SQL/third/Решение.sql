@@ -78,7 +78,7 @@ END;
 create index id_ProductModel on Marketing.ProductModel (ProductModelID) include(ProductModel);
 create index id_Product on Marketing.Product (ProductModelID, SubcategoryID) include(ProductID);
 create index id_Subcategory on Marketing.Subcategory (SubcategoryID, CategoryID) include(SubcategoryName);
-create index id_Category on Marketing.Category (CategoryID) include(CategoryName);
+create index id_Category on Marketing.Category (CategoryID) include(CategoryName); -- Поля, используемые для группировик можно записать к ключевым полям, но у меня это не дало прирост в скорости =)
 
 
 SELECT
