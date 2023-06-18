@@ -1,7 +1,7 @@
 USE [Stylish-Fashionable-Youth]
 GO
 
-/****** Object:  Table [dbo].[Customers]    Script Date: 18.06.2023 9:36:08 ******/
+/****** Object:  Table [dbo].[Customers]    Script Date: 17.06.2023 19:56:08 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -27,7 +27,7 @@ GO
 USE [Stylish-Fashionable-Youth]
 GO
 
-/****** Object:  Table [dbo].[OrderDetails]    Script Date: 18.06.2023 9:36:27 ******/
+/****** Object:  Table [dbo].[OrderDetails]    Script Date: 17.06.2023 19:56:27 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -64,7 +64,7 @@ GO
 USE [Stylish-Fashionable-Youth]
 GO
 
-/****** Object:  Table [dbo].[Orders]    Script Date: 18.06.2023 9:36:40 ******/
+/****** Object:  Table [dbo].[Orders]    Script Date: 17.06.2023 19:56:40 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -100,7 +100,7 @@ GO
 USE [Stylish-Fashionable-Youth]
 GO
 
-/****** Object:  Table [dbo].[Products]    Script Date: 18.06.2023 9:36:52 ******/
+/****** Object:  Table [dbo].[Products]    Script Date: 17.06.2023 19:56:52 ******/
 SET ANSI_NULLS ON
 GO
 
