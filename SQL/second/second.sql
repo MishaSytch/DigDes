@@ -1,7 +1,7 @@
 USE [Stylish-Fashionable-Youth]
 GO
 
-/****** Object:  Table [dbo].[Customers]    Script Date: 17.06.2023 13:01:03 ******/
+/****** Object:  Table [dbo].[Customers]    Script Date: 18.06.2023 9:36:08 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -9,23 +9,25 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Customers](
-	[РџРѕРєСѓРїР°С‚РµР»СЊ] [nvarchar](50) NOT NULL,
-	[РџРѕР»] [nchar](1) NOT NULL,
-	[Р“РѕСЂРѕРґ] [nvarchar](50) NOT NULL,
-	[Р”РѕРј] [nvarchar](50) NOT NULL,
- CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED 
+	[Покупатель] [int] NOT NULL,
+	[Имя] [nvarchar](50) NOT NULL,
+	[Фамилия] [nvarchar](50) NOT NULL,
+	[Пол] [nchar](1) NOT NULL,
+	[Город] [nvarchar](50) NOT NULL,
+	[Дом] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Customers_1] PRIMARY KEY CLUSTERED 
 (
-	[РџРѕРєСѓРїР°С‚РµР»СЊ] ASC
+	[Покупатель] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
 
------------------------------------------------
+---------------------------------------
 
 USE [Stylish-Fashionable-Youth]
 GO
 
-/****** Object:  Table [dbo].[OrderDetails]    Script Date: 17.06.2023 13:01:27 ******/
+/****** Object:  Table [dbo].[OrderDetails]    Script Date: 18.06.2023 9:36:27 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -34,27 +36,35 @@ GO
 
 CREATE TABLE [dbo].[OrderDetails](
 	[id] [int] NOT NULL,
-	[РўРѕРІР°СЂ] [nvarchar](50) NOT NULL,
-	[РљРѕР»РёС‡РµСЃС‚РІРѕ] [int] NOT NULL
+	[Товар] [nvarchar](50) NOT NULL,
+	[Количество] [int] NOT NULL
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD  CONSTRAINT [FK_РўРѕРІР°СЂ] FOREIGN KEY([РўРѕРІР°СЂ])
-REFERENCES [dbo].[Products] ([РўРѕРІР°СЂ])
+ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD  CONSTRAINT [FK_id] FOREIGN KEY([id])
+REFERENCES [dbo].[Orders] ([id])
 GO
 
-ALTER TABLE [dbo].[OrderDetails] CHECK CONSTRAINT [FK_РўРѕРІР°СЂ]
+ALTER TABLE [dbo].[OrderDetails] CHECK CONSTRAINT [FK_id]
+GO
+
+ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD  CONSTRAINT [FK_Товар] FOREIGN KEY([Товар])
+REFERENCES [dbo].[Products] ([Товар])
+GO
+
+ALTER TABLE [dbo].[OrderDetails] CHECK CONSTRAINT [FK_Товар]
 GO
 
 
 
------------------------------------------------
+
+---------------------------------------
 
 
 USE [Stylish-Fashionable-Youth]
 GO
 
-/****** Object:  Table [dbo].[Orders]    Script Date: 17.06.2023 13:01:35 ******/
+/****** Object:  Table [dbo].[Orders]    Script Date: 18.06.2023 9:36:40 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -63,38 +73,34 @@ GO
 
 CREATE TABLE [dbo].[Orders](
 	[id] [int] NOT NULL,
-	[РџРѕРєСѓРїР°С‚РµР»СЊ] [nvarchar](50) NOT NULL,
-	[Р”Р°С‚Р°] [date] NOT NULL,
-	[Р’СЃРµРіРѕ] [money] NOT NULL,
- CONSTRAINT [PK_Orders] PRIMARY KEY CLUSTERED 
+	[Покупатель] [int] NOT NULL,
+	[Дата] [date] NOT NULL,
+	[Всего] [money] NOT NULL,
+ CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[Orders]  WITH CHECK ADD  CONSTRAINT [FK_РџРѕРєСѓРїР°С‚РµР»СЊ] FOREIGN KEY([РџРѕРєСѓРїР°С‚РµР»СЊ])
-REFERENCES [dbo].[Customers] ([РџРѕРєСѓРїР°С‚РµР»СЊ])
+ALTER TABLE [dbo].[Orders]  WITH CHECK ADD  CONSTRAINT [PK_Покупатель] FOREIGN KEY([Покупатель])
+REFERENCES [dbo].[Customers] ([Покупатель])
 GO
 
-ALTER TABLE [dbo].[Orders] CHECK CONSTRAINT [FK_РџРѕРєСѓРїР°С‚РµР»СЊ]
-GO
-
-ALTER TABLE [dbo].[Orders]  WITH CHECK ADD  CONSTRAINT [PK_id] FOREIGN KEY([id])
-REFERENCES [dbo].[Orders] ([id])
-GO
-
-ALTER TABLE [dbo].[Orders] CHECK CONSTRAINT [PK_id]
+ALTER TABLE [dbo].[Orders] CHECK CONSTRAINT [PK_Покупатель]
 GO
 
 
 
------------------------------------------------
+
+
+---------------------------------------
+
 
 USE [Stylish-Fashionable-Youth]
 GO
 
-/****** Object:  Table [dbo].[Products]    Script Date: 17.06.2023 13:01:46 ******/
+/****** Object:  Table [dbo].[Products]    Script Date: 18.06.2023 9:36:52 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -102,12 +108,12 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Products](
-	[РўРѕРІР°СЂ] [nvarchar](50) NOT NULL,
-	[Р¦РµРЅР°] [money] NOT NULL,
-	[Р•Рґ.] [nchar](10) NOT NULL,
+	[Товар] [nvarchar](50) NOT NULL,
+	[Цена] [money] NOT NULL,
+	[Ед.] [nchar](10) NOT NULL,
  CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED 
 (
-	[РўРѕРІР°СЂ] ASC
+	[Товар] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
