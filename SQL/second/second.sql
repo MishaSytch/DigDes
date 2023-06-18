@@ -9,15 +9,15 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Customers](
-	[Покупатель] [int] NOT NULL,
-	[Имя] [nvarchar](50) NOT NULL,
-	[Фамилия] [nvarchar](50) NOT NULL,
-	[Пол] [nchar](1) NOT NULL,
-	[Город] [nvarchar](50) NOT NULL,
-	[Дом] [nvarchar](50) NOT NULL,
+	[РџРѕРєСѓРїР°С‚РµР»СЊ] [int] NOT NULL,
+	[РРјСЏ] [nvarchar](50) NOT NULL,
+	[Р¤Р°РјРёР»РёСЏ] [nvarchar](50) NOT NULL,
+	[РџРѕР»] [nchar](1) NOT NULL,
+	[Р“РѕСЂРѕРґ] [nvarchar](50) NOT NULL,
+	[Р”РѕРј] [nvarchar](50) NOT NULL,
  CONSTRAINT [PK_Customers_1] PRIMARY KEY CLUSTERED 
 (
-	[Покупатель] ASC
+	[РџРѕРєСѓРїР°С‚РµР»СЊ] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -36,8 +36,8 @@ GO
 
 CREATE TABLE [dbo].[OrderDetails](
 	[id] [int] NOT NULL,
-	[Товар] [nvarchar](50) NOT NULL,
-	[Количество] [int] NOT NULL
+	[РўРѕРІР°СЂ] [nvarchar](50) NOT NULL,
+	[РљРѕР»РёС‡РµСЃС‚РІРѕ] [int] NOT NULL
 ) ON [PRIMARY]
 GO
 
@@ -48,11 +48,11 @@ GO
 ALTER TABLE [dbo].[OrderDetails] CHECK CONSTRAINT [FK_id]
 GO
 
-ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD  CONSTRAINT [FK_Товар] FOREIGN KEY([Товар])
-REFERENCES [dbo].[Products] ([Товар])
+ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD  CONSTRAINT [FK_РўРѕРІР°СЂ] FOREIGN KEY([РўРѕРІР°СЂ])
+REFERENCES [dbo].[Products] ([РўРѕРІР°СЂ])
 GO
 
-ALTER TABLE [dbo].[OrderDetails] CHECK CONSTRAINT [FK_Товар]
+ALTER TABLE [dbo].[OrderDetails] CHECK CONSTRAINT [FK_РўРѕРІР°СЂ]
 GO
 
 
@@ -73,9 +73,9 @@ GO
 
 CREATE TABLE [dbo].[Orders](
 	[id] [int] NOT NULL,
-	[Покупатель] [int] NOT NULL,
-	[Дата] [date] NOT NULL,
-	[Всего] [money] NOT NULL,
+	[РџРѕРєСѓРїР°С‚РµР»СЊ] [int] NOT NULL,
+	[Р”Р°С‚Р°] [date] NOT NULL,
+	[Р’СЃРµРіРѕ] [money] NOT NULL,
  CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
@@ -83,11 +83,11 @@ CREATE TABLE [dbo].[Orders](
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[Orders]  WITH CHECK ADD  CONSTRAINT [PK_Покупатель] FOREIGN KEY([Покупатель])
-REFERENCES [dbo].[Customers] ([Покупатель])
+ALTER TABLE [dbo].[Orders]  WITH CHECK ADD  CONSTRAINT [PK_РџРѕРєСѓРїР°С‚РµР»СЊ] FOREIGN KEY([РџРѕРєСѓРїР°С‚РµР»СЊ])
+REFERENCES [dbo].[Customers] ([РџРѕРєСѓРїР°С‚РµР»СЊ])
 GO
 
-ALTER TABLE [dbo].[Orders] CHECK CONSTRAINT [PK_Покупатель]
+ALTER TABLE [dbo].[Orders] CHECK CONSTRAINT [PK_РџРѕРєСѓРїР°С‚РµР»СЊ]
 GO
 
 
@@ -108,12 +108,12 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Products](
-	[Товар] [nvarchar](50) NOT NULL,
-	[Цена] [money] NOT NULL,
-	[Ед.] [nchar](10) NOT NULL,
+	[РўРѕРІР°СЂ] [nvarchar](50) NOT NULL,
+	[Р¦РµРЅР°] [money] NOT NULL,
+	[Р•Рґ.] [nchar](10) NOT NULL,
  CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED 
 (
-	[Товар] ASC
+	[РўРѕРІР°СЂ] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
